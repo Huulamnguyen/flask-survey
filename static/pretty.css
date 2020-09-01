@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+/* Buttons */
+.btn {
+    background-color: #00BF6F;
+}
+
+#questions {
+    height: 100%;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+header {
+    background-color: #00BF6F;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00BF6F;
+}

@@ -1,0 +1,33 @@
+<!-- todo: Extend from base.html -->
+{% extends 'base.html' %}
+<!-- todo: Title -->
+{% block title %} Thanks! {% endblock %}
+<!-- todo: Add content below -->
+{% block content %}
+
+<div class="card" style="width: 30rem;">
+    <img src="http://www.logo-designer.co/wp-content/uploads/2017/07/2017-surveymonkey-new-logo-design-4.png" class="card-img-top" alt="Survey Monkey logo">
+    <div class="card-body text-center">
+        <h1>Welcome</h1>
+        <form method="post">
+            <div class="form-group">
+                <p>Please pick your survey:</p>
+                <div class="mb-3">
+                    <div class="input-group is-invalid">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="surveyselections">Options</label>
+                      </div>
+                      <select name="survey_code" class="custom-select" id="surveyselections">
+                        {% for code, survey in surveys.items() %}
+                        <option value="{{ code }}">{{ survey.title }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>                    
+                  </div>                      
+            </div>
+            <button type="submit" class="btn btn-block text-white">Go!</button>
+        </form>      
+    </div>
+  </div>
+
+{% endblock %}
